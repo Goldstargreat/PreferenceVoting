@@ -1,121 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="5dp"
+    android:layout_margin="10dp"
     android:orientation="vertical"
     tools:context=".MainActivity">
-
     <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
-
+        android:layout_weight="3"
+        android:layout_height="0dp">
         <ImageView
             android:id="@+id/imgv1"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="3dp"
+            android:layout_height="match_parent"
             android:scaleType="fitXY"
-            android:src="@drawable/pic01" />
-
+            android:layout_margin="5dp"
+            android:src="@drawable/idol01"/>
         <ImageView
             android:id="@+id/imgv2"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="3dp"
+            android:layout_height="match_parent"
             android:scaleType="fitXY"
-            android:src="@drawable/pic02" />
-
+            android:layout_margin="5dp"
+            android:src="@drawable/idol02"/>
         <ImageView
             android:id="@+id/imgv3"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="3dp"
+            android:layout_height="match_parent"
             android:scaleType="fitXY"
-            android:src="@drawable/pic03" />
+            android:layout_margin="5dp"
+            android:src="@drawable/idol03"/>
     </LinearLayout>
-
     <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
-
+        android:layout_weight="3"
+        android:layout_height="0dp">
         <ImageView
             android:id="@+id/imgv4"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="3dp"
+            android:layout_height="match_parent"
             android:scaleType="fitXY"
-            android:src="@drawable/pic04" />
-
+            android:layout_margin="5dp"
+            android:src="@drawable/idol04"/>
         <ImageView
             android:id="@+id/imgv5"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="3dp"
+            android:layout_height="match_parent"
             android:scaleType="fitXY"
-            android:src="@drawable/pic05" />
-
+            android:layout_margin="5dp"
+            android:src="@drawable/idol05"/>
         <ImageView
             android:id="@+id/imgv6"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="3dp"
+            android:layout_height="match_parent"
             android:scaleType="fitXY"
-            android:src="@drawable/pic06" />
+            android:layout_margin="5dp"
+            android:src="@drawable/idol06"/>
     </LinearLayout>
-
     <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
-
+        android:layout_weight="3"
+        android:layout_height="0dp">
         <ImageView
             android:id="@+id/imgv7"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="3dp"
+            android:layout_height="match_parent"
             android:scaleType="fitXY"
-            android:src="@drawable/pic07" />
-
+            android:layout_margin="5dp"
+            android:src="@drawable/idol07"/>
         <ImageView
             android:id="@+id/imgv8"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="3dp"
+            android:layout_height="match_parent"
             android:scaleType="fitXY"
-            android:src="@drawable/pic08" />
-
+            android:layout_margin="5dp"
+            android:src="@drawable/idol08"/>
         <ImageView
             android:id="@+id/imgv9"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="3dp"
+            android:layout_height="match_parent"
             android:scaleType="fitXY"
-            android:src="@drawable/pic09" />
+            android:layout_margin="5dp"
+            android:src="@drawable/idol09"/>
     </LinearLayout>
     <Button
         android:id="@+id/btn_finish"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.3"
+        android:layout_weight="1"
         android:textSize="20sp"
-        android:text="투표종료"
-        />
-
+        android:text="투표종료"/>
 </LinearLayout>
