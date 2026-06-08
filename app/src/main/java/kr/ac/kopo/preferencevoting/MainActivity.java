@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity
                 // ResultActivity를 시작하는 Intent 객체를 생성하고 값을 넣는다
                 Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
 
-                // 다음 화면에 데이터를 화물처럼 보내는 것
+                // 다음 화면에 데이터를 화물처럼 보내는 것(putExtra)
                 intent.putExtra("voteCount", voteCount);
                 intent.putExtra("idolNameArr", idolNameArr);
 
