@@ -1,7 +1,6 @@
 package kr.ac.kopo.preferencevoting;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,7 +14,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity
-{
+{  // 이 클래스는 안드로이드의 화면 역할을 하겠다
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -30,6 +29,7 @@ public class MainActivity extends AppCompatActivity
         });
 
         setTitle("아이돌 선호도 투표");
+        // 앱 상단 액션바 제목을 "아이돌 선호도 투표"로 설정.
 
         // 투표 수를 저장할 길이 9개의 배열 객체를 생성하고 0으로 초기화 하는 코드를 작성
         final int voteCount[] = new int[9];
