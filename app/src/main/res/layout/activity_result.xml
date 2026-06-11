@@ -1,32 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- 최상위 세로 레이아웃 (전체 화면) -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="10dp"
+    android:gravity="center_horizontal"
     android:orientation="vertical"
     android:background="@color/bg_main"
     tools:context=".ResultActivity">
 
     <!-- ───────────────────────────────────────── -->
-    <!-- 타이틀 영역 -->
+    <!-- 상단: 1위 아이돌 이름 + 사진 -->
     <!-- ───────────────────────────────────────── -->
-    <LinearLayout
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textSize="20sp"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-        android:gravity="center">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:text="좋아하는 아이돌 투표 결과"/>
-    </LinearLayout>
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/imgv"
+        android:layout_margin="20dp"
+        android:layout_width="200dp"
+        android:adjustViewBounds="true"
+        android:layout_height="wrap_content" />
+
     <!-- ───────────────────────────────────────── -->
     <!-- 투표 결과 목록 (아이돌1 ~ 아이돌9) -->
     <!-- ───────────────────────────────────────── -->
@@ -50,7 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            style="?android:attr/ratingBarStyleIndicator"/>
+            style="?android:attr/ratingBarStyleSmall"/>
     </LinearLayout>
 
     <!-- 아이돌 2 -->
@@ -72,7 +75,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            style="?android:attr/ratingBarStyleIndicator"/>
+            style="?android:attr/ratingBarStyleSmall"/>
     </LinearLayout>
 
     <!-- 아이돌 3 -->
@@ -94,7 +97,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            style="?android:attr/ratingBarStyleIndicator"/>
+            style="?android:attr/ratingBarStyleSmall"/>
     </LinearLayout>
 
     <!-- 아이돌 4 -->
@@ -116,7 +119,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            style="?android:attr/ratingBarStyleIndicator"/>
+            style="?android:attr/ratingBarStyleSmall"/>
     </LinearLayout>
 
     <!-- 아이돌 5 -->
@@ -138,7 +141,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            style="?android:attr/ratingBarStyleIndicator"/>
+            style="?android:attr/ratingBarStyleSmall"/>
     </LinearLayout>
 
     <!-- 아이돌 6 -->
@@ -160,7 +163,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            style="?android:attr/ratingBarStyleIndicator"/>
+            style="?android:attr/ratingBarStyleSmall"/>
     </LinearLayout>
 
     <!-- 아이돌 7 -->
@@ -182,7 +185,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            style="?android:attr/ratingBarStyleIndicator"/>
+            style="?android:attr/ratingBarStyleSmall"/>
     </LinearLayout>
 
     <!-- 아이돌 8 -->
@@ -204,7 +207,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            style="?android:attr/ratingBarStyleIndicator"/>
+            style="?android:attr/ratingBarStyleSmall"/>
     </LinearLayout>
 
     <!-- 아이돌 9 -->
@@ -226,7 +229,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            style="?android:attr/ratingBarStyleIndicator"/>
+            style="?android:attr/ratingBarStyleSmall"/>
     </LinearLayout>
 
     <!-- ───────────────────────────────────────── -->
@@ -239,4 +242,5 @@
         android:layout_weight="1"
         android:text="돌아가기"
         android:textSize="15sp"/>
+
 </LinearLayout>
