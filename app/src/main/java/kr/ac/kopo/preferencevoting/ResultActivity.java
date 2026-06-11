@@ -8,6 +8,9 @@ import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -54,22 +57,49 @@ public class ResultActivity extends AppCompatActivity
         textTitle = findViewById(R.id.text_title);
         imgv = findViewById(R.id.imgv);
 
-        // 투표수 중에서 최댓값(1위) 구하기
-        int maxIndex = 0;
-        int maxValue = voteCount[0];
-
-        for (int i = 1; i < voteCount.length; i++)
+        // 투표수 중에서 최댓값(1위 득표수) 구하기
+        int maxValue = 0;
+        for (int i = 0; i < voteCount.length; i++)
         {
             if (voteCount[i] > maxValue)
             {
                 maxValue = voteCount[i];
-                maxIndex = i;
             }
         }
 
-        // 상단에 1위 아이돌 이름과 사진 표시
-        textTitle.setText(idolNameArr[maxIndex]);
-        imgv.setImageResource(imgResArr[maxIndex]);
+        // 최댓값과 같은 득표수를 가진 아이돌 인덱스를 모두 수집 (공동 1위 대비)
+        List<Integer> topList = new ArrayList<Integer>();
+        for (int i = 0; i < voteCount.length; i++)
+        {
+            if (voteCount[i] == maxValue)
+            {
+                topList.add(i);
+            }
+        }
+
+        // 공동 1위 여부에 따라 상단 표시 분기
+        if (topList.size() > 1)
+        {
+            // 공동 1위: 이름들을 이어붙여서 표시, 이미지는 기본 아이콘으로
+            StringBuilder sb = new StringBuilder("🏆 공동 1위: ");
+            for (int i = 0; i < topList.size(); i++)
+            {
+                sb.append(idolNameArr[topList.get(i)]);
+                if (i < topList.size() - 1)
+                {
+                    sb.append(", ");
+                }
+            }
+            textTitle.setText(sb.toString());
+            imgv.setImageResource(android.R.drawable.star_big_on); // 기본 별 아이콘
+        }
+        else
+        {
+            // 단독 1위: 기존처럼 이름 + 사진 표시
+            int maxIndex = topList.get(0);
+            textTitle.setText("🏆 1위: " + idolNameArr[maxIndex]);
+            imgv.setImageResource(imgResArr[maxIndex]);
+        }
 
         // XML에 있는 TextView, RatingBar들의 ID 목록
         int[] textIdArr = {
